@@ -1,0 +1,107 @@
+.main-cont-about{
+  .cont-menu{
+    padding: 10px;
+    .menu{
+      a{
+        font-size: 30px;
+        color:black;
+        font-weight: bold;
+      }
+    }
+    .cont-mail{
+    p{
+      text-align: end;
+      color: black;
+      font-size: 24px;
+      span{
+        font-size: 30px;
+      }
+    }
+    }
+  }
+  .main-cont-info{
+    padding-top: 20px;
+    display: flex;
+    .cont-title{
+      width: 35%;
+      .title-bio{
+        height: 35%;
+        margin-bottom: 30px;
+      }
+      .title-events{
+        height: 65%;
+      }
+                    h2{
+                padding: 10px;
+          font-weight: bold;
+          font-size: 28px;
+        }
+    }
+    .cont-info{
+      // height: 100%;
+      // width: 65%;
+      .info-bio{
+        height: 35%;
+        display: flex;
+        justify-content:flex-end;
+        margin-bottom: 30px;
+        .bio{
+          width: 25%;
+          margin-right: 10px;
+          p{
+            padding-top: 10px;
+            // width: 50%;
+            font-size: 26px;
+          }
+        }
+        .bio-ang{
+          margin-left: 100px;
+        }
+      }
+      .cont-info-events{
+        display: flex;
+        flex-direction:column;
+      .info-events{
+        display: flex;
+        justify-content:flex-end;
+        p{
+          // height: 40px;
+          font-size: 26px;
+          padding-top: 10px;
+        }
+        .events-year{
+          width: 100px;
+          margin-right: 10px;
+          .year{
+            font-size: 26px;
+          }
+        }
+        .events-title{
+          // width: calc(50% - 50px);
+          margin-right: 10px;
+          display: flex;
+          width: 25%;
+          p{
+            // width: 50%;
+            font-size: 28px;
+          }
+        }
+        .events-link{
+          margin-right: 10px;
+          padding-top: 10px;
+          width: 25%;
+          display: flex;
+          a{
+            font-size: 26px;
+          }
+        }
+      }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1300px) {
+.main-cont-about .main-cont-info .cont-info .info-bio .bio p {
+  width: 80%;
+}
+}

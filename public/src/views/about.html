@@ -1,0 +1,48 @@
+<div class="main-cont-about" ng-controller="about-controller">
+  <div class="cont-menu">
+    <div class="menu">
+      <a ng-href="/#/home" ng-class="{'up-font-menu': resizeHome === false}">Index</a>
+      <a ng-href="/#/about" ng-class="{'up-font-menu': resizeHome === false}">About</a>
+      <a href="" ng-class="{'up-font-menu': resizeHome === false}">Bandcamp</a>
+    </div>
+    <div class="cont-mail">
+      <!-- <a href="contact@linearmovementrecords.com" ng-class="{'up-font-menu': resizeHome === false}">contact@linearmovementrecords.com</a> -->
+      <p><span class='bigger-name'><strong>Linear Movement,</strong></span> Paris France<br> Motions along a straightline.</p>
+    </div>
+  </div>
+  <div class="main-cont-info">
+    <div class="cont-title">
+      <div class="title-bio">
+        <h2>Biography</h2>
+      </div>
+      <div class="title-events">
+        <h2>Medias <br> & Events</h2>
+      </div>
+    </div>
+    <div class="cont-info">
+      <div class="info-bio">
+        <div class="bio bio-ang">
+          <p>{{infoBio[0].descriptionAng}}</p>
+        </div>
+        <div class="bio">
+          <p>{{infoBio[0].descriptionFr}}</p>
+        </div>
+      </div>
+      <div class="cont-info-events">
+        <div class="info-events" ng-repeat="event in infoEvents">
+          <div class="events-year">
+            <p class="year">{{event.dateEvent}}</p>
+          </div>
+          <div class="events-title">
+            <p class="title">{{event.titreEvent}}</p>
+          </div>
+          <div class="events-link">
+            <a target="_blank" href="{{event.linkEvent}}" ng-show="event.linkEvent.length">Link_Event </a>
+            <a target="_blank" href="{{event.podcastOne}}" ng-show="event.podcastOne.length">Podcast_One </a>
+            <a target="_blank" href="{{event.podcastTwo}}" ng-show="event.podcastTwo.length">Podcast_Two </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
