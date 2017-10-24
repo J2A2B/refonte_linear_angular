@@ -1,9 +1,10 @@
 'use strict';
 const mongoose = require('mongoose');
-const mongoDb = 'mongodb://localhost:27017/linearDatabase';
-mongoose.connect(mongoDb);
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// const mongoDb = 'mongodb://localhost:27017/linearDatabase';
+// mongoose.connect(mongoDb);
+mongoose.connect('mongodb://jean:linear2a@ds231315.mlab.com:31315/lineardatabase');
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 const epSchema = require('./models/ep.js');
 const bioSchema = require('./models/bio.js');
