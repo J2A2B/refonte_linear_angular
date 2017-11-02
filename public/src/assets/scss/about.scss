@@ -1,26 +1,6 @@
 .main-cont-about{
-  .cont-menu{
-    padding: 10px;
-    .menu{
-      a{
-        font-size: 30px;
-        color:black;
-        font-weight: bold;
-      }
-    }
-    .cont-mail{
-    p{
-      text-align: end;
-      color: black;
-      font-size: 24px;
-      span{
-        font-size: 30px;
-      }
-    }
-    }
-  }
   .main-cont-info{
-    padding-top: 20px;
+    padding:1.7%;
     display: flex;
     .cont-title{
       width: 35%;
@@ -31,15 +11,13 @@
       .title-events{
         height: 65%;
       }
-                    h2{
-                padding: 10px;
-          font-weight: bold;
-          font-size: 28px;
-        }
+      h2{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 24px;
+      }
     }
     .cont-info{
-      // height: 100%;
-      // width: 65%;
       .info-bio{
         height: 35%;
         display: flex;
@@ -47,25 +25,27 @@
         margin-bottom: 30px;
         .bio{
           width: 25%;
-          margin-right: 10px;
           p{
             padding-top: 10px;
-            // width: 50%;
             font-size: 26px;
+            line-height: 28px;
           }
         }
+        .hide-elem-about{
+          width: 100px;
+          margin-right: 10px;
+        }
         .bio-ang{
-          margin-left: 100px;
+          margin-right: 40px;
         }
       }
       .cont-info-events{
         display: flex;
         flex-direction:column;
-      .info-events{
-        display: flex;
-        justify-content:flex-end;
-        p{
-          // height: 40px;
+        .info-events{
+          display: flex;
+          justify-content:flex-end;
+          p{
           font-size: 26px;
           padding-top: 10px;
         }
@@ -73,35 +53,214 @@
           width: 100px;
           margin-right: 10px;
           .year{
-            font-size: 26px;
-          }
-        }
-        .events-title{
-          // width: calc(50% - 50px);
-          margin-right: 10px;
-          display: flex;
-          width: 25%;
-          p{
-            // width: 50%;
             font-size: 28px;
           }
         }
-        .events-link{
-          margin-right: 10px;
-          padding-top: 10px;
-          width: 25%;
+        .events-title{
+          margin-right: 40px;
           display: flex;
-          a{
+          width: 25%;
+          p{
             font-size: 26px;
           }
         }
-      }
+        .events-link{
+          padding-top: 10px;
+          width: 25%;
+          display: flex;
+          flex-wrap: wrap;
+          a{
+            font-size: 26px;
+            margin-right: 10px;
+            cursor: pointer;
+            color: black;
+            border-bottom: 2px solid white;
+            height: 27px;
+          }
+          a:hover{
+            border-bottom: 2px solid black;
+          }
+        }
       }
     }
   }
 }
-@media screen and (max-width: 1300px) {
-.main-cont-about .main-cont-info .cont-info .info-bio .bio p {
-  width: 80%;
 }
+
+@media screen and (max-width: 1400px) {
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-cont-about .main-cont-info .cont-title .title-bio {
+    margin-bottom: 80px;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio {
+    margin-bottom: 80px;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio p {
+    font-size: 22px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-year .year {
+    font-size: 22px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-title p {
+    font-size: 22px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-link a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main-cont-about .cont-menu .menu a {
+    font-size: 24px;
+  }
+  .main-cont-about .cont-menu .cont-mail p {
+    font-size: 20px;
+  }
+  .main-cont-about .cont-menu .cont-mail p span {
+    font-size: 20px;
+  }
+  .main-cont-about .main-cont-info .cont-title h2 {
+    font-size: 24px;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio p {
+    font-size: 18px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-year .year {
+    font-size: 18px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-title p {
+    font-size: 18px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-link a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio p {
+    font-size: 16px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-year .year {
+    font-size: 16px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-title p {
+    font-size: 16px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-link a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-cont-home .cont-home {
+    bottom: 1;
+  }
+  .main-cont-about .cont-menu{
+    justify-content:center;
+  }
+  .main-cont-about .cont-menu .menu a {
+    font-size: 20px;
+  }
+  .main-cont-about .cont-menu .cont-mail{
+    display: none;
+  }
+  .main-cont-about .main-cont-info .cont-title .title-bio {
+    margin-bottom: 20px;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio {
+    margin-bottom: 20px;
+  }
+  .main-cont-about .main-cont-info .cont-title h2 {
+    font-size: 14px;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio p {
+    font-size: 14px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-year .year {
+    font-size: 14px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-title p {
+    font-size: 14px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-link a {
+    font-size: 12px;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio {
+    justify-content:center;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio-ang {
+    margin-left: 20px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events {
+    justify-content:flex-start;
+    margin-left: 10px;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    p{
+      line-height: 14px;
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-year {
+    width: 30px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-title {
+  width: 44%;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio .hide-elem-about{
+    display: none;
+  }
+  .main-cont-about .main-cont-info .cont-title {
+    display: none;
+  }
+  .main-cont-about .cont-window-about .window-about {
+    width: 250px;
+  }
+   .main-cont-about .cont-window-about {
+    iframe{
+      width: 250px;
+    }
+   }
+   .cont-info-events .cont-window-about  .cont-head-home .head-home-right {
+    display: none;
+   }
+}
+
+@media screen and (max-width: 400px) {
+  .main-cont-about .main-cont-info .cont-title .title-bio {
+    display: none;
+  }
+  .main-cont-about .main-cont-info .cont-title .title-events {
+    display: none;
+  }
+  .main-cont-about .cont-menu .menu a {
+    font-size: 16px;
+  }
+  .main-cont-about .main-cont-info .cont-info .info-bio .bio p {
+    font-size: 12px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-year .year {
+    font-size: 10px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-title p {
+    font-size: 10px;
+  }
+  .main-cont-about .main-cont-info .cont-info .cont-info-events .info-events .events-link a {
+    font-size: 10px;
+  }
 }

@@ -1,85 +1,128 @@
 <div ng-controller="home-controller" class="main-cont-home">
-<!-- <button ng-click="rigthSlide()">right</button>
--->
-<div class="mask-home" ng-click="resizeHome = false" ng-class="{'mask-hide': resizeHome === false}"></div>
-<div class="cont-home" ng-class="{'resize-home': resizeHome === false}">
-  <div class="cont-head-home" ng-class="{'hide-head-home': resizeHome === false}">
-    <div class="head-home">
-      <div class="cont-color-btn">
-        <div class="color-btn red"></div>
-        <div class="color-btn yellow"></div>
-        <div class="color-btn green"></div>
+  <div class="mask-home" ng-click="resizeHome = false" ng-class="{'mask-hide': resizeHome === false}"></div>
+  <div class="cont-home" ng-class="{'resize-home': resizeHome === false}">
+    <div class="cont-head-home" ng-class="{'hide-head-home': resizeHome === false}">
+      <div class="head-home" >
+        <div class="cont-color-btn" ng-class="{'hide-btn-head': resizeHome === false}">
+          <div class="color-btn red"></div>
+          <div class="color-btn yellow"></div>
+          <div class="color-btn green"></div>
+        </div>
+        <div class="cont-icon-left" ng-class="{'hide-btn-head': resizeHome === false}">
+          <div class="icon">
+            <div class="icon-img sidebar-img"></div>
+            <div class="chevron-img"></div>
+          </div>
+          <div class="icon">
+            <div class="icon-img zoom-out-img"></div>
+          </div>
+          <div class="icon">
+            <div class="icon-img zoom-in-img"></div>
+          </div>
+          <div class="icon">
+            <div class="icon-img upload-img"></div>
+          </div>
+        </div>
       </div>
-      <div class="cont-icon-left">
-        <div class="icon">
-          <div class="icon-img sidebar-img"></div>
-          <div class="chevron-img"></div>
+      <div class="head-home head-home-middle" ng-class="{'hide-btn-head': resizeHome === false}">
+        <div class="png-img"></div>
+        <p>Index</p>
+        <div class="chevron-img"></div>
+      </div>
+      <div class="head-home head-home-right" ng-class="{'hide-home-right': resizeHome === false}">
+        <div class="cont-double-img">
+          <div class="cont-pen">
+            <div class="icon-img pen-img"></div>
+          </div>
+          <div class="cont-chev">
+            <div class="chev-img"></div>
+          </div>
         </div>
-        <div class="icon">
-          <div class="icon-img zoom-out-img"></div>
+        <div class="icon icon-margin">
+          <div class="icon-img rotate-img"></div>
         </div>
-        <div class="icon">
-          <div class="icon-img zoom-in-img"></div>
+        <div class="icon icon-margin">
+          <div class="icon-img tool-img"></div>
         </div>
-        <div class="icon">
-          <div class="icon-img upload-img"></div>
-        </div>
+        <input type="text" name="search" placeholder="Rechercher" ng-model="filterEp" ng-class="{'input-hide': resizeHome === false}">
       </div>
     </div>
-    <div class="head-home head-home-middle">
-      <div class="png-img"></div>
-      <p>Plan de travail 2.png</p>
-      <div class="chevron-img"></div>
-    </div>
-    <div class="head-home head-home-right" ng-class="{'hide-home-right': resizeHome === false}">
-      <div class="cont-double-img">
-        <div class="cont-pen">
-          <div class="icon-img pen-img"></div>
+    <div class="cont-body-home">
+      <div class="cont-menu">
+        <div class="menu">
+          <a class="white-menu" ng-href="/#/home" ng-class="{'up-menu': resizeHome === false}">Index</a>
+          <a class="white-menu" ng-href="/#/about" ng-class="{'up-menu': resizeHome === false}">About</a>
+          <a class="white-menu" href="https://linearmovement.bandcamp.com/" target="_blank" ng-class="{'up-menu': resizeHome === false}">Bandcamp</a>
         </div>
-        <div class="cont-chev">
-          <div class="chev-img"></div>
+        <div class="cont-mail">
+          <p ng-class="{'up-menu': resizeHome === false}"><span class='bigger-name'><a class="linear-menu-white" href="mailto:contact@linearmovementrecords.com"><strong>Linear Movement,</strong></a></span> Paris France<br> Motions along a straightline.</p>
         </div>
       </div>
-      <div class="icon">
-        <div class="icon-img rotate-img"></div>
+      <div class="cont-corpus" ng-class="{'responsive-cont-corpus': resizeHome === false}">
+        <div class="cont-info-ep" ng-repeat="ep in infoEp | filter:{$: filterEp}" ng-click="showInfosEp(ep)" ng-class="{'responsive-info-ep': resizeHome === false}">
+          <p ng-class="{'up-font-title': resizeHome === false}">{{ep.nameEp}}</p>
+          <p ng-class="{'up-font-name-ep': resizeHome === false}">{{ep.nameArtist}}</p>
+          <p ng-class="{'up-font-size': resizeHome === false}">{{ep.catVynil}}</p>
+          <p ng-class="{'up-font-size': resizeHome === false}">{{ep.distrib}}</p>
+          <p ng-class="{'up-font-size': resizeHome === false}">{{ep.mastering}}</p>
+          <p ng-class="{'up-font-size': resizeHome === false}">{{ep.conception}}</p>
+          <p ng-class="{'up-font-size': resizeHome === false}">{{ep.date}}</p>
+        </div>
       </div>
-      <div class="icon">
-        <div class="icon-img tool-img"></div>
+      <div class="slideshow" ng-class="{'show-img': showImg === false}">
+        <div class="cont-head-home drag-slide" ng-mousedown="dragSlideshow()">
+          <div class="head-home">
+            <div class="cont-color-btn">
+              <div class="color-btn red"></div>
+              <div class="color-btn yellow"></div>
+              <div class="color-btn green"></div>
+            </div>
+            <div class="cont-icon-left">
+              <div class="icon">
+                <div class="icon-img sidebar-img"></div>
+                <div class="chevron-img"></div>
+              </div>
+              <div class="icon">
+                <div class="icon-img zoom-out-img"></div>
+              </div>
+              <div class="icon">
+                <div class="icon-img zoom-in-img"></div>
+              </div>
+              <div class="icon">
+                <div class="icon-img upload-img"></div>
+              </div>
+            </div>
+          </div>
+          <div class="head-home head-home-middle">
+            <div class="png-img"></div>
+            <p>_work_in_progress.png</p>
+            <div class="chevron-img"></div>
+          </div>
+          <div class="head-home head-home-right">
+            <div class="cont-double-img">
+              <div class="cont-pen">
+                <div class="icon-img pen-img"></div>
+              </div>
+              <div class="cont-chev">
+                <div class="chev-img"></div>
+              </div>
+            </div>
+            <div class="icon">
+              <div class="icon-img rotate-img"></div>
+            </div>
+            <div class="icon">
+              <div class="icon-img tool-img"></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-click slide-left" ng-click="leftSlide()" ></div>        
+        <ul>
+          <li ng-repeat="ep in eps">
+            <img ng-src="/assets/images/{{ep.photo}}"/>
+          </li>
+        </ul>
+        <div class="slide-click slide-right" ng-click="rightSlide()"></div> 
       </div>
-      <input type="text" name="search" placeholder="Rechercher" ng-model="filterEp" ng-class="{'input-hide': resizeHome === false}">
     </div>
   </div>
-  <div class="cont-body-home">
-    <div class="cont-menu">
-      <div class="menu">
-        <a ng-href="/#/home" ng-class="{'up-font-menu': resizeHome === false}">Index</a>
-        <a ng-href="/#/about" ng-class="{'up-font-menu': resizeHome === false}">About</a>
-        <a href="" ng-class="{'up-font-menu': resizeHome === false}">Bandcamp</a>
-      </div>
-      <div class="cont-mail">
-        <a href="contact@linearmovementrecords.com" ng-class="{'up-font-menu': resizeHome === false}">contact@linearmovementrecords.com</a>
-      </div>
-    </div>
-    <div class="cont-corpus">
-      <div class="cont-info-ep content content-ep" ng-repeat="ep in infoEp | filter:{$: filterEp}" ng-click="showInfosEp(ep)">
-        <p ng-class="{'up-font-title': resizeHome === false}">{{ep.nameEp}}</p>
-        <p ng-class="{'up-font-title': resizeHome === false}">{{ep.nameArtist}}</p>
-        <p ng-class="{'up-font-size': resizeHome === false}">{{ep.catVynil}}</p>
-        <p ng-class="{'up-font-size': resizeHome === false}">{{ep.distrib}}</p>
-        <p ng-class="{'up-font-size': resizeHome === false}">{{ep.mastering}}</p>
-        <p ng-class="{'up-font-size': resizeHome === false}">{{ep.conception}}</p>
-        <p ng-class="{'up-font-size': resizeHome === false}">{{ep.date}}</p>
-      </div>
-    </div>
-    <div class="slideshow" ng-class="{'show-img': showImg === false}">
-      <div class="slide-click slide-left" ng-click="leftSlide()" ></div>        
-      <ul>
-        <li ng-repeat="ep in eps track by $index">
-          <img ng-src="/assets/images/{{ep.photo}}"/>
-        </li>
-      </ul>
-      <div class="slide-click slide-right" ng-click="rightSlide()"></div> 
-    </div>
-  </div>
-</div>
 </div>

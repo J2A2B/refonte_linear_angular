@@ -1,13 +1,13 @@
 <div class="main-cont-about" ng-controller="about-controller">
   <div class="cont-menu">
     <div class="menu">
-      <a ng-href="/#/home" ng-class="{'up-font-menu': resizeHome === false}">Index</a>
-      <a ng-href="/#/about" ng-class="{'up-font-menu': resizeHome === false}">About</a>
-      <a href="" ng-class="{'up-font-menu': resizeHome === false}">Bandcamp</a>
+      <a class="up-menu black-menu" ng-href="/#/home">Index</a>
+      <a class="up-menu black-menu" ng-href="/#/about">About</a>
+      <a class="up-menu black-menu" href="">Bandcamp</a>
     </div>
     <div class="cont-mail">
       <!-- <a href="contact@linearmovementrecords.com" ng-class="{'up-font-menu': resizeHome === false}">contact@linearmovementrecords.com</a> -->
-      <p><span class='bigger-name'><strong>Linear Movement,</strong></span> Paris France<br> Motions along a straightline.</p>
+      <p class="up-menu black-menu"><span class='bigger-name black-menu'><a href="mailto:contact@linearmovementrecords.com" class="black-menu linear-menu-black"><strong>Linear Movement,</strong></a></span> Paris France<br> Motions along a straightline.</p>
     </div>
   </div>
   <div class="main-cont-info">
@@ -21,6 +21,7 @@
     </div>
     <div class="cont-info">
       <div class="info-bio">
+        <div class="hide-elem-about"></div>
         <div class="bio bio-ang">
           <p>{{infoBio[0].descriptionAng}}</p>
         </div>
@@ -38,11 +39,61 @@
           </div>
           <div class="events-link">
             <a target="_blank" href="{{event.linkEvent}}" ng-show="event.linkEvent.length">Link_Event </a>
-            <a target="_blank" href="{{event.podcastOne}}" ng-show="event.podcastOne.length">Podcast_One </a>
-            <a target="_blank" href="{{event.podcastTwo}}" ng-show="event.podcastTwo.length">Podcast_Two </a>
+            <a  ng-click="getIdEvent(event, input='one')" ng-show="event.podcasts[0].url.length" >{{event.podcasts[0].name}}</a>
+            <a  ng-click="getIdEvent(event, input='two')" ng-show="event.podcasts[1].url.length" >{{event.podcasts[1].name}}</a>
           </div>
+        </div>
+        <div class="cont-window-about" ng-class="{'show-window': showWindow === false}">
+          <div class="cont-head-home window-about drag-slide" ng-mousedown="dragSlideshow()">
+            <div class="head-home">
+              <div class="cont-color-btn">
+                <div class="color-btn red"></div>
+                <div class="color-btn yellow"></div>
+                <div class="color-btn green"></div>
+              </div>
+              <div class="cont-icon-left">
+                <div class="icon">
+                  <div class="icon-img sidebar-img"></div>
+                  <div class="chevron-img"></div>
+                </div>
+                <div class="icon">
+                  <div class="icon-img zoom-out-img"></div>
+                </div>
+                <div class="icon">
+                  <div class="icon-img zoom-in-img"></div>
+                </div>
+                <div class="icon">
+                  <div class="icon-img upload-img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="head-home head-home-middle">
+              <div class="png-img"></div>
+              <p>{{podcastName}}</p>
+              <div class="chevron-img"></div>
+            </div>
+            <div class="head-home head-home-right">
+              <div class="cont-double-img">
+                <div class="cont-pen">
+                  <div class="icon-img pen-img"></div>
+                </div>
+                <div class="cont-chev">
+                  <div class="chev-img"></div>
+                </div>
+              </div>
+              <div class="icon">
+                <div class="icon-img rotate-img"></div>
+              </div>
+              <div class="icon">
+                <div class="icon-img tool-img"></div>
+              </div>
+              <input type="text" name="search" placeholder="Rechercher" ng-model="filterEp" ng-class="{'input-hide': resizeHome === false}">
+            </div>
+          </div>
+          <iframe width="550" height="200" scrolling="no" frameborder="no" ng-src="{{fullUrlSoundcloud}}"></iframe>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" ng-src="https://w.soundcloud.com/player/?url=//soundcloud.com/nraelnu/unlearnshowinvitelinearmovementhvl320&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe> -->
