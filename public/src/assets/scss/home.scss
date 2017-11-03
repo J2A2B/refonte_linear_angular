@@ -1,8 +1,8 @@
 @font-face {
-font-family: 'helvetica';
-src: url('../../../lib/fonts/HelveticaNeue/HelveticaNeue.woff') format('woff');
-font-weight: normal;
-font-style: normal;
+  font-family: 'helvetica';
+  src: url('../../../lib/fonts/HelveticaNeue/HelveticaNeue.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 body{
   font-family:"helvetica";
@@ -53,17 +53,17 @@ body{
     height: 450px;
     z-index: 900;
     background-color: black;
-  .hide-head-home{
-    height: 0;
-    visibility: hidden;
-    transition: all 1s;
-  }
-  .hide-btn-head{
-        height: 0;
-    visibility: hidden;
-    transition: all 0.1s;
-  }
-  .cont-body-home{
+    .hide-head-home{
+      height: 0;
+      visibility: hidden;
+      transition: all 1s;
+    }
+    .hide-btn-head{
+      height: 0;
+      visibility: hidden;
+      transition: all 0.1s;
+    }
+    .cont-body-home{
     // position: relative;
     background-color: black;
     .slideshow {
@@ -125,14 +125,20 @@ body{
     margin: 1.7%;
     margin-top: 20px;
     height: 40%;
-    cursor: url("../images/cursor-yellow.png"), move;
+    cursor: pointer;
+    // cursor: url("../images/cursor-yellow.png"), move;
     p{
+      clear:both;
+      float:left;
       font-size: 11px;
       color: white;
       line-height: 12px;
     }
     p:first-child, p:nth-child(2){
       font-weight: bold;
+    }
+    p:first-child{
+      border-bottom:2px solid black;
     }
     .up-font-size{
       font-size: 26px;
@@ -149,6 +155,9 @@ body{
       transition: all 1s;
       line-height: 24px;
     }
+  }
+  .cont-info-ep:hover p:first-child {
+    border-bottom:2px solid white;
   }
 }
 
@@ -236,7 +245,7 @@ img{
   }
 }
 @media screen and (max-width: 500px) {
-    .main-cont-home .cont-home {
+  .main-cont-home .cont-home {
     bottom: 0px;
   }
   .cont-body-home .cont-menu {
@@ -269,8 +278,8 @@ img{
   .main-cont-home .cont-home .cont-body-home .slideshow li img {
     height: 250px;
     width: 250px;
-}
-.main-cont-home .cont-head-home .head-home-right {
-  display: none;
-}
+  }
+  .main-cont-home .cont-head-home .head-home-right {
+    display: none;
+  }
 }

@@ -37,6 +37,9 @@
           .red{
             background-color: #FC615D;
             margin-left: 10px;
+            position: relative;
+            z-index: 960;
+            cursor: pointer!important;
           }
           .yellow{
             background-color: #FDC242;

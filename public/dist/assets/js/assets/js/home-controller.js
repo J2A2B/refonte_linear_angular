@@ -7,8 +7,13 @@ app.controller('home-controller', ['$scope','$http', '$routeParams', 'dataEp', f
   })
   $scope.showInfosEp = (ep) =>{
     $scope.showImg = false;
+    console.log($scope.showImg, "faux")
     $scope.eps = ep.photos;
   }
+  // $scope.close =() =>{
+  //   $scope.showImg = true;
+  //   console.log($scope.showImg, "vrai")
+  // }
   $scope.leftSlide = () =>{
     const arrayImg = $scope.eps;
     const lastElement = arrayImg.slice(arrayImg.length-1);

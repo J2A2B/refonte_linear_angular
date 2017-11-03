@@ -26,7 +26,7 @@
       </div>
       <div class="head-home head-home-middle" ng-class="{'hide-btn-head': resizeHome === false}">
         <div class="png-img"></div>
-        <p>Index</p>
+        <p>Release</p>
         <div class="chevron-img"></div>
       </div>
       <div class="head-home head-home-right" ng-class="{'hide-home-right': resizeHome === false}">
@@ -50,7 +50,7 @@
     <div class="cont-body-home">
       <div class="cont-menu">
         <div class="menu">
-          <a class="white-menu" ng-href="/#/home" ng-class="{'up-menu': resizeHome === false}">Index</a>
+          <a class="white-menu" ng-href="/#/home" ng-class="{'up-menu': resizeHome === false}">Release</a>
           <a class="white-menu" ng-href="/#/about" ng-class="{'up-menu': resizeHome === false}">About</a>
           <a class="white-menu" href="https://linearmovement.bandcamp.com/" target="_blank" ng-class="{'up-menu': resizeHome === false}">Bandcamp</a>
         </div>
@@ -73,7 +73,7 @@
         <div class="cont-head-home drag-slide" ng-mousedown="dragSlideshow()">
           <div class="head-home">
             <div class="cont-color-btn">
-              <div class="color-btn red"></div>
+              <div class="color-btn red" ng-click="showImg=true"></div>
               <div class="color-btn yellow"></div>
               <div class="color-btn green"></div>
             </div>
